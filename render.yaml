@@ -1,9 +1,5 @@
 services:
   - type: web
     name: newsbot
-    env: python
-    buildCommand: pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
-    startCommand: gunicorn run:app
-    build:
-      pythonVersion: 3.10
-
+    env: docker
+    dockerfilePath: ./Dockerfile
